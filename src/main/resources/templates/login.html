@@ -1,19 +1,27 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>登录页面</title>
 </head>
 <body>
-    <form action="/addlogin" name="loginfrom" accept-charset="utf-8" method="post">
-        <label class="label-tips" for="username">账号: </label>
-        <input type="text" id="username" name="username" class="inputstyle"/>
-        <div>
-            <label class="lable-tips" for="password">密码: </label>
-            <input type="password" id="password" name="password" class="inputstyle" />
-        </div>
-        <input type="submit" name="登录"/>
-        <a href="register.html" class="zcxy" target="_blank">注册</a>
+    <form action="/users/addlogin" name="loginfrom" accept-charset="utf-8" method="post">
+        <ul>
+            <li>
+                <label class="label-tips" for="username">账号:  </label>
+                <input type="text" id="username" name="username" class="inputstyle"/>
+            </li>
+            <li>
+                <label class="lable-tips" for="password">密码: </label>
+                <input type="password" id="password" name="password" class="inputstyle" />
+            </li>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="登录" value="登录" size="8" /></p>
+
+
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/register.html">注册账号</a> </p>
+        </ul>
     </form>
 </body>
 </html>

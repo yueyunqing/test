@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.hl7demo.dao.UserDao">
+
+    <select id="login" resultType="com.example.hl7demo.entity.UserEntity">
+      select * from users where username=#{param1} and password=#{param2}
+   </select>
+    <insert id="regist" parameterType="UserEntity" useGeneratedKeys="true">
+        insert into users(username, password) values(#{0},#{1})
+    </insert>
+</mapper>
